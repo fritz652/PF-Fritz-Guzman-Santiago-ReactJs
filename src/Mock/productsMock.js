@@ -1,0 +1,38 @@
+let products = [
+  {
+    id: 1,
+    title: "Zapatillas Baloncesto Hombre adidas Forum Mid",
+    price: 350,
+    stock: 4,
+    description: "",
+    category: "hombre",
+    img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698293696/samples/ecommerce/zapatillas/Zapatillas%20Hombre/Zapatillas%20Baloncesto%20Hombre%20adidas%20Forum%20Mid/GV9767_5_f1c68598-e396-459b-98cd-08862ccb3487_ntr1dj.jpg",
+  },
+  {
+    id: 2,
+    title: "Zapatillas Baloncesto Hombre adidas Forum Mid",
+    price: 350,
+    stock: 4,
+    description: "",
+    category: "hombre",
+    img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698293696/samples/ecommerce/zapatillas/Zapatillas%20Hombre/Zapatillas%20Baloncesto%20Hombre%20adidas%20Forum%20Mid/GV9767_5_f1c68598-e396-459b-98cd-08862ccb3487_ntr1dj.jpg",
+  },
+  {
+    id: 3,
+    title: "Zapatillas Baloncesto Hombre adidas Forum Mid",
+    price: 350,
+    stock: 4,
+    description: "",
+    category: "hombre",
+    img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698293696/samples/ecommerce/zapatillas/Zapatillas%20Hombre/Zapatillas%20Baloncesto%20Hombre%20adidas%20Forum%20Mid/GV9767_5_f1c68598-e396-459b-98cd-08862ccb3487_ntr1dj.jpg",
+  },
+  {
+    id: 4,
+    title: "Zapatillas Baloncesto Hombre adidas Forum Mid",
+    price: 350,
+    stock: 4,
+    description: "",
+    category: "hombre",
+    img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698293696/samples/ecommerce/zapatillas/Zapatillas%20Hombre/Zapatillas%20Baloncesto%20Hombre%20adidas%20Forum%20Mid/GV9767_5_f1c68598-e396-459b-98cd-08862ccb3487_ntr1dj.jpg",
+  },
+];
