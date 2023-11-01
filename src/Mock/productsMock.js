@@ -1,4 +1,4 @@
-let products = [
+export let products = [
   {
     id: 1,
     title: "Zapatillas Baloncesto Hombre adidas Forum Mid",

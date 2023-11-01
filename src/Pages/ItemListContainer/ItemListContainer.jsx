@@ -1,10 +1,18 @@
-function itemListContainer({ nombre, edad }) {
-  return (
-    <div>
-      <h4>Hola {nombre}, bienvenido</h4>
-      <h2>Edad: {edad}</h2>
-    </div>
-  );
-}
+import { useState, useEffect } from "react";
+import { products } from "../../Mock/productsMock";
+import ItemList from "./ItemList";
 
-export default itemListContainer;
+const ItemListContainer = () => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const tarea = new Promise((resolve, reject) => {
+      resolve(products);
+    });
+    tarea.then((res) => setItems(res)).catch((error) => console.log(error));
+  }, []);
+
+  return <ItemList items={items} />;
+};
+
+export default ItemListContainer;
