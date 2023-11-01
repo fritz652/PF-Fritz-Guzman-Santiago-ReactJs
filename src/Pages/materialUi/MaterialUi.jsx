@@ -1,5 +1,5 @@
 const MaterialUi = () => {
-  return <div>MAterialUi</div>;
+  return <div>MaterialUi</div>;
 };
 
 export default MaterialUi;
