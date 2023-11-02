@@ -4,12 +4,13 @@ import Header from "./Layout/Header/Header";
 import NavBar from "./Layout/NavBar/NavBar";
 import Footer from "./Layout/Footer/Footer";
 //Components
-import CardProduct from "./Components/Card/Card.jsx";
+
 //Pages
 import Home from "./Pages/Home/Home";
 import ItemListContainer from "./Pages/ItemListContainer/ItemListContainer";
 import Login from "./Pages/Login/Login";
 import CounterCountainer from "./Components/Counter/CounterCountainer";
+import FetchingData from "./Pages/FechingData/FetchingData";
 
 function App() {
   return (
@@ -18,10 +19,11 @@ function App() {
       <NavBar />
       <Home />
 
-      <CardProduct />
       <Login />
       <ItemListContainer />
       <CounterCountainer stock={20} />
+
+      <FetchingData />
       <Footer />
     </>
   );
