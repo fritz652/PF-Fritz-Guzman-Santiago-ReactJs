@@ -14,16 +14,20 @@ const FetchingData = () => {
       .catch((err) => console.log(err)); */
     const tarea = axios.get("http://jsonplaceholder.typicode.com/albums");
 
-    tarea.then((res) => setAlbums(res.data));
+    tarea.then((res) => setAlbums(res.data)).catch((err) => console.log(err));
   }, []);
 
   const crear = () => {
-    fetch("http://jsonplaceholder.typicode.com/albums", {
+    /* fetch("http://jsonplaceholder.typicode.com/albums", {
       method: "POST",
       body: JSON.stringify({
         userId: 1,
         title: "Nuevo Album",
       }),
+    }); */
+    axios.post("http://jsonplaceholder.typicode.com/albums", {
+      useId: 2,
+      title: "Albun nuevo",
     });
   };
 

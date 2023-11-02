@@ -9,8 +9,9 @@ import Footer from "./Layout/Footer/Footer";
 import Home from "./Pages/Home/Home";
 import ItemListContainer from "./Pages/ItemListContainer/ItemListContainer";
 import Login from "./Pages/Login/Login";
-import CounterCountainer from "./Components/Counter/CounterCountainer";
+//import CounterCountainer from "./Components/Counter/CounterCountainer";
 import FetchingData from "./Pages/FechingData/FetchingData";
+import ItemDetailContainer from "./Pages/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
 
       <Login />
       <ItemListContainer />
-      <CounterCountainer stock={20} />
+      {/* <CounterCountainer stock={20} /> */}
+      <ItemDetailContainer />
 
       <FetchingData />
       <Footer />
