@@ -19,8 +19,12 @@ const ItemDetailContainer = () => {
       .catch((err) => console.log(err));
   }, [id]);
 
-  const onAdd = (product) => {
-    console.log("se agrego al carrito", product);
+  const onAdd = (cantidad) => {
+    let obj = {
+      ...productSelected,
+      quantity: cantidad,
+    };
+    console.log("este es el producto que se agrega", obj);
   };
 
   return <ItemDetail productSelected={productSelected} onAdd={onAdd} />;

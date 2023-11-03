@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import CounterPresentation from "./CounterPresentation";
 
-const CounterContainer = ({ stock }) => {
+const CounterContainer = ({ stock, onAdd }) => {
   const [contador, setContador] = useState(0);
 
   /* const stock = 5; */
@@ -25,7 +25,12 @@ const CounterContainer = ({ stock }) => {
     console.log("Se realizo una peticion");
   }, []);
   return (
-    <CounterPresentation sumar={sumar} restar={restar} contador={contador} />
+    <CounterPresentation
+      sumar={sumar}
+      restar={restar}
+      contador={contador}
+      onAdd={onAdd}
+    />
   );
 };
 

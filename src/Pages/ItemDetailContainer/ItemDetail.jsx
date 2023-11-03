@@ -6,8 +6,7 @@ function ItemDetail({ productSelected, onAdd }) {
       {/* aca todo el detalle */}
       <h2>{productSelected.title}</h2>
       {/* Aca del contador */}
-      <CounterContainer stock={productSelected.stock} />
-      <button onClick={() => onAdd(productSelected)}>Agregar al carrito</button>
+      <CounterContainer stock={productSelected.stock} onAdd={onAdd} />
     </div>
   );
 }
