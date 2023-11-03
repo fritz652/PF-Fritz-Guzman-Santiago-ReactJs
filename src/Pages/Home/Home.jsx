@@ -1,11 +1,13 @@
-import Carousel from "../../Components/Carousel/Carousel"
+import Carousel from "../../Components/Carousel/Carousel";
+import ItemListContainer from "../ItemListContainer/ItemListContainer";
 
 const Home = () => {
   return (
     <div>
-      <Carousel/>
+      <Carousel />
+      <ItemListContainer />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

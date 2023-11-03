@@ -1,4 +1,5 @@
 //React Dom
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 //layout
 import Header from "./Layout/Header/Header";
 import NavBar from "./Layout/NavBar/NavBar";
@@ -15,19 +16,20 @@ import ItemDetailContainer from "./Pages/ItemDetailContainer/ItemDetailContainer
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <NavBar />
-      <Home />
-
-      <Login />
-      <ItemListContainer />
-      {/* <CounterCountainer stock={20} /> */}
-      <ItemDetailContainer />
-
-      <FetchingData />
+      <Routes>
+        <Route element={<NavBar />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/all" element={<ItemListContainer />} />
+          <Route path="/cart" element={<h1>Estoy en el carrito</h1>} />
+          <Route path="/itemDetail" element={<ItemDetailContainer />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="*" element={<h1>Not found</h1>} />
+        </Route>
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 
