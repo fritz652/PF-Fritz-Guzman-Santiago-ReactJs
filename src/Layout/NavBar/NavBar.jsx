@@ -3,27 +3,27 @@ import "./NavBar.css";
 //componentes
 import CardWidget from "../../Components/CardWidget/CardWidget";
 //For router dom
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <>
       <nav>
         <ul className="logo">
-          <a>Fritz</a>
+          <Link to="/">Fritz</Link>
         </ul>
         <ul className="navOne">
           <li>
-            <a>All</a>
+            <Link to="/all">All</Link>
           </li>
           <li>
-            <a>Hombre</a>
+            <Link to="">Hombre</Link>
           </li>
           <li>
-            <a>Mujer</a>
+            <Link to="">Mujer</Link>
           </li>
           <li>
-            <a>Kids</a>
+            <Link to="">Kids</Link>
           </li>
         </ul>
         <CardWidget />

@@ -13,6 +13,7 @@ import Login from "./Pages/Login/Login";
 //import CounterCountainer from "./Components/Counter/CounterCountainer";
 import FetchingData from "./Pages/FechingData/FetchingData";
 import ItemDetailContainer from "./Pages/ItemDetailContainer/ItemDetailContainer";
+import Cart from "./Pages/Cart/Cart";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
         <Route element={<NavBar />}>
           <Route path="/" element={<Home />} />
           <Route path="/all" element={<ItemListContainer />} />
-          <Route path="/cart" element={<h1>Estoy en el carrito</h1>} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/itemDetail" element={<ItemDetailContainer />} />
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<h1>Not found</h1>} />
