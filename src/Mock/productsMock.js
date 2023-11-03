@@ -6,7 +6,7 @@ export let products = [
     stock: 1,
     description: "Zapatilla baloncento buena",
     category: "hombre",
-    img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698293696/samples/ecommerce/zapatillas/Zapatillas%20Hombre/Zapatillas%20Baloncesto%20Hombre%20adidas%20Forum%20Mid/GV9767_5_f1c68598-e396-459b-98cd-08862ccb3487_ntr1dj.jpg",
+    img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698293573/samples/ecommerce/zapatillas/Zapatillas%20Hombre/Zapatillas%20Baloncesto%20Hombre%20adidas%20Forum%20Mid/GV9767_1_13c1edda-5dd9-4475-97de-09d4b80fd068_vizvau.jpg",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ export let products = [
     stock: 3,
     description: "zapatilla buena urbana",
     category: "hombre",
-    img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698291479/samples/ecommerce/zapatillas/Zapatillas%20Hombre/zapatillas%20urbanas%20hombre%20adidas%20forum%20low/fy7755_5_szlvts.jpg",
+    img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698291418/samples/ecommerce/zapatillas/Zapatillas%20Hombre/zapatillas%20urbanas%20hombre%20adidas%20forum%20low/fy7755_1_oa9qwy.jpg",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export let products = [
     stock: 4,
     description: "zapatilla buena Gazelle",
     category: "hombre",
-    img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698293440/samples/ecommerce/zapatillas/Zapatillas%20Hombre/Zapatillas%20Urbanas%20Hombre%20adidas%20Gazelle/IG1061_5_rghl8r.jpg",
+    img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698293388/samples/ecommerce/zapatillas/Zapatillas%20Hombre/Zapatillas%20Urbanas%20Hombre%20adidas%20Gazelle/IG1061_1_bd6hzl.jpg",
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ export let products = [
     stock: 5,
     description: "zapatilla buena Campus",
     category: "mujer",
-    img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698294415/samples/ecommerce/zapatillas/Zapatillas%20Mujer/Zapatillas%20Urbanas%20Mujer%20adidas%20Campus%2000S/ID7028_5_hyegnx.jpg",
+    img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698294314/samples/ecommerce/zapatillas/Zapatillas%20Mujer/Zapatillas%20Urbanas%20Mujer%20adidas%20Campus%2000S/ID7028_1_p3a5sx.jpg",
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ export let products = [
     stock: 6,
     description: "zapatilla buena Forum Low",
     category: "mujer",
-    img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698294073/samples/ecommerce/zapatillas/Zapatillas%20Mujer/Zapatillas%20Urbanas%20Mujer%20adidas%20Forum%20Low/IF5166_5_lsqida.jpg",
+    img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698294020/samples/ecommerce/zapatillas/Zapatillas%20Mujer/Zapatillas%20Urbanas%20Mujer%20adidas%20Forum%20Low/IF5166_1_wei3nt.jpg",
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ export let products = [
     stock: 7,
     description: "zapatilla buena Suprema",
     category: "mujer",
-    img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698294212/samples/ecommerce/zapatillas/Zapatillas%20Mujer/Zapatillas%20Urbanas%20Mujer%20adidas%20Supersta/IE9642_5_t26uon.jpg",
+    img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698294164/samples/ecommerce/zapatillas/Zapatillas%20Mujer/Zapatillas%20Urbanas%20Mujer%20adidas%20Supersta/IE9642_1_uziaqp.jpg",
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ export let products = [
     stock: 8,
     description: "zapatilla buena Luxury",
     category: "mujer",
-    img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698294565/samples/ecommerce/zapatillas/Zapatillas%20Mujer/Zapatillas%20Urbanas%20Mujer%20Puma%20Mayze%20Luxury/393081-02_2_a8mavu.jpg",
+    img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698294547/samples/ecommerce/zapatillas/Zapatillas%20Mujer/Zapatillas%20Urbanas%20Mujer%20Puma%20Mayze%20Luxury/393081-02_1_cl5feu.jpg",
   },
   {
     id: 9,
