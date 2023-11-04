@@ -5,9 +5,15 @@ import Footer from "./Footer/Footer";
 const Layout = () => {
   return (
     <div>
-      <NavBar />
-      <Outlet />
-      <Footer />
+      <div style={{ height: "10vh" }}>
+        <NavBar />
+      </div>
+      <div style={{ minHeight: "80vh" }}>
+        <Outlet />
+      </div>
+      <div style={{ height: "10vh" }}>
+        <Footer />
+      </div>
     </div>
   );
 };

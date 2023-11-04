@@ -1,9 +1,9 @@
-import "./Footer.css"
+import "./Footer.css";
 
 const Footer = () => {
   return (
     <>
-      <footer>
+      <footer className="footer">
         <ul>
           <li>Ayudas</li>
           <li>Términos y condiciones</li>
@@ -17,16 +17,18 @@ const Footer = () => {
         </ul>
         <ul>
           <li>Contactanos</li>
-          <li>Escríbenos
-              <a href="">fritz.guzman.santiago@gmail.com</a>
+          <li>
+            Escríbenos
+            <a href="">fritz.guzman.santiago@gmail.com</a>
           </li>
-          <li>Teléfonos
-              <a href="">whatsapp: +51981659039</a>
+          <li>
+            Teléfonos
+            <a href="">whatsapp: +51981659039</a>
           </li>
         </ul>
       </footer>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
