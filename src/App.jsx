@@ -14,22 +14,30 @@ import Login from "./Pages/Login/Login";
 import FetchingData from "./Pages/FechingData/FetchingData";
 import ItemDetailContainer from "./Pages/ItemDetailContainer/ItemDetailContainer";
 import Cart from "./Pages/Cart/Cart";
+import { ThemeProvider } from "@emotion/react";
+import customTheme from "./themeConfig";
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route element={<NavBar />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/all" element={<ItemListContainer />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="*" element={<h1>Not found</h1>} />
-        </Route>
-      </Routes>
-      <Footer />
+      <ThemeProvider theme={customTheme}>
+        <Header />
+        <Routes>
+          <Route element={<NavBar />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/all" element={<ItemListContainer />} />
+            <Route
+              path="/category/:categoryName"
+              element={<ItemListContainer />}
+            />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="*" element={<h1>Not found</h1>} />
+          </Route>
+        </Routes>
+        <Footer />
+      </ThemeProvider>
     </BrowserRouter>
   );
 }
