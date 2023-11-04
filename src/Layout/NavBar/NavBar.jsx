@@ -3,7 +3,7 @@ import "./NavBar.css";
 //componentes
 import CardWidget from "../../Components/CardWidget/CardWidget";
 //For router dom
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -28,7 +28,6 @@ const NavBar = () => {
         </ul>
         <CardWidget />
       </nav>
-      <Outlet />
     </>
   );
 };

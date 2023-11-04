@@ -7,6 +7,7 @@ export let products = [
     description: "Zapatilla baloncento buena",
     category: "hombre",
     img: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698293573/samples/ecommerce/zapatillas/Zapatillas%20Hombre/Zapatillas%20Baloncesto%20Hombre%20adidas%20Forum%20Mid/GV9767_1_13c1edda-5dd9-4475-97de-09d4b80fd068_vizvau.jpg",
+    img1: "https://res.cloudinary.com/dphjwkeox/image/upload/v1698293702/samples/ecommerce/zapatillas/Zapatillas%20Hombre/Zapatillas%20Baloncesto%20Hombre%20adidas%20Forum%20Mid/GV9767_6_d64ba357-bb5b-4394-847c-9eea3f12805a_vfnu9q.jpg",
   },
   {
     id: 2,

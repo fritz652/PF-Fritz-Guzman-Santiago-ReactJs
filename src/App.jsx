@@ -16,6 +16,7 @@ import ItemDetailContainer from "./Pages/ItemDetailContainer/ItemDetailContainer
 import Cart from "./Pages/Cart/Cart";
 import { ThemeProvider } from "@emotion/react";
 import customTheme from "./themeConfig";
+import Layout from "./Layout/Layout";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
       <ThemeProvider theme={customTheme}>
         <Header />
         <Routes>
-          <Route element={<NavBar />}>
+          <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
             <Route path="/all" element={<ItemListContainer />} />
             <Route
@@ -36,7 +37,6 @@ function App() {
             <Route path="*" element={<h1>Not found</h1>} />
           </Route>
         </Routes>
-        <Footer />
       </ThemeProvider>
     </BrowserRouter>
   );
