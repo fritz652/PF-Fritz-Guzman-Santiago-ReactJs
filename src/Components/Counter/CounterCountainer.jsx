@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import CounterPresentation from "./CounterPresentation";
 
-const CounterContainer = ({ stock, onAdd }) => {
-  const [contador, setContador] = useState(0);
+const CounterContainer = ({ stock, onAdd, initial = 1 }) => {
+  const [contador, setContador] = useState(initial);
 
   /* const stock = 5; */
 

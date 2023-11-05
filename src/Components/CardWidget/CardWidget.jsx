@@ -4,8 +4,11 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
 import { Badge } from "@mui/material";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 const CardWidget = () => {
+  const { cart } = useContext(CartContext);
   return (
     <ul className="navTwo">
       <li>
@@ -20,7 +23,7 @@ const CardWidget = () => {
       </li>
       <li>
         <Link to="/cart">
-          <Badge badgeContent={4} showZero color="primary">
+          <Badge badgeContent={cart.length} showZero color="primary">
             <ShoppingCartOutlinedIcon />
           </Badge>
         </Link>

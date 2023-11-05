@@ -1,4 +1,5 @@
 import Cart from "../Pages/Cart/Cart";
+import Checkout from "../Pages/Checkout.jsx/Checkout";
 import Home from "../Pages/Home/Home";
 import ItemDetailContainer from "../Pages/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "../Pages/ItemListContainer/ItemListContainer";
@@ -34,5 +35,10 @@ export const routes = [
     id: "login",
     path: "/login",
     Element: Login,
+  },
+  {
+    id: "checkout",
+    path: "/checkout",
+    Element: Checkout,
   },
 ];
