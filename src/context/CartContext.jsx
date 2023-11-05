@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { products } from "../Mock/productsMock";
 
 export const CartContext = createContext();
 
@@ -43,7 +44,32 @@ const CartContextComponent = ({ children }) => {
   const clearCart = () => {
     setCart([]);
   };
-  let data = { cart, addToCart, getQuantityById, clearCart };
+
+  // ELimina un elemento del carrito
+
+  const deleteProductById = (id) => {
+    console.log("el id es: ", id);
+    let newArr = cart.filter((product) => product.id !== id);
+    setCart(newArr);
+  };
+
+  // totalizar carrito
+
+  const getTotalPrice = () => {
+    let total = cart.reduce((acc, elemento) => {
+      return acc + elemento.price * elemento.quantity;
+    }, 0);
+    return total;
+  };
+
+  let data = {
+    cart,
+    addToCart,
+    getQuantityById,
+    clearCart,
+    deleteProductById,
+    getTotalPrice,
+  };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };
 
