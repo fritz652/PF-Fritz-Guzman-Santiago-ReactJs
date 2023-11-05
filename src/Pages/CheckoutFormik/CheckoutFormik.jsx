@@ -12,9 +12,17 @@ const CheckoutFormik = () => {
 
     validateOnChange: false,
     validationSchema: Yup.object({
-      nombre: Yup.string().required().min(3).max(20),
-      apellido: Yup.string().required().min(3).max(20),
-      email: Yup.string().required().email(),
+      nombre: Yup.string()
+        .required("El campo es obligatorio")
+        .min(3, "Debe tener almenos 3 caracteres")
+        .max(20, "No debe tener mas de 20 caracteres"),
+      apellido: Yup.string()
+        .required("El campo es obligatorio")
+        .min(3, "Debe tener almenos 3 caracteres")
+        .max(20, "No debe tener mas de 20 caracteres"),
+      email: Yup.string()
+        .required("El campo es obligatorio")
+        .email("Email no valido, asegurate de contener el simbolo @"),
     }),
   });
 
@@ -29,6 +37,7 @@ const CheckoutFormik = () => {
           name="nombre"
           onChange={handleChange}
           error={errors.nombre ? true : false}
+          helperText={errors.nombre}
         />
         <TextField
           id="outlined-basic"
@@ -37,6 +46,7 @@ const CheckoutFormik = () => {
           name="apellido"
           onChange={handleChange}
           error={errors.apellido ? true : false}
+          helperText={errors.apellido}
         />
         <TextField
           id="outlined-basic"
@@ -45,6 +55,7 @@ const CheckoutFormik = () => {
           name="email"
           onChange={handleChange}
           error={errors.email ? true : false}
+          helperText={errors.email}
         />
         <Button variant="contained" type="submit">
           Enviar
