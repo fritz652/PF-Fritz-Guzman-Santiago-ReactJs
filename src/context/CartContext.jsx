@@ -37,7 +37,13 @@ const CartContextComponent = ({ children }) => {
     let product = cart.find((elemento) => elemento.id === id);
     return product?.quantity;
   };
-  let data = { cart, addToCart, getQuantityById };
+
+  // limpiar cart
+
+  const clearCart = () => {
+    setCart([]);
+  };
+  let data = { cart, addToCart, getQuantityById, clearCart };
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;
 };
 

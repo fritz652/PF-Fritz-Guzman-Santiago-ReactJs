@@ -7,6 +7,7 @@ function ItemDetail({ productSelected, onAdd, initial }) {
       <h2>{productSelected.title}</h2>
       <img src={productSelected.img} alt="" />
       <img src={productSelected.img1} alt="" />
+      {initial && <h5>Ya tienes {initial} en el carrito</h5>}
       {/* Aca del contador */}
       <CounterContainer
         stock={productSelected.stock}
