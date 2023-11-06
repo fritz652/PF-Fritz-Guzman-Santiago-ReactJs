@@ -1,8 +1,9 @@
-import { Button } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import Swal from "sweetalert2";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const Cart = () => {
   const { cart, clearCart, deleteProductById, getTotalPrice } =
@@ -44,9 +45,9 @@ const Cart = () => {
           <h2>{product.title}</h2>
           <h3>S/ {product.price}</h3>
           <h3>cantidad: {product.quantity}</h3>
-          <Button onClick={() => deleteProductById(product.id)}>
-            Eliminar
-          </Button>
+          <IconButton onClick={() => deleteProductById(product.id)}>
+            <DeleteIcon color="primary" />
+          </IconButton>
         </div>
       ))}
 
