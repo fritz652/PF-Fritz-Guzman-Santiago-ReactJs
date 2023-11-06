@@ -8,7 +8,8 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
 const CardWidget = () => {
-  const { cart } = useContext(CartContext);
+  const { getTotalQuantity } = useContext(CartContext);
+  let total = getTotalQuantity();
   return (
     <ul className="navTwo">
       <li>
@@ -23,7 +24,7 @@ const CardWidget = () => {
       </li>
       <li>
         <Link to="/cart">
-          <Badge badgeContent={cart.length} showZero color="primary">
+          <Badge badgeContent={total} showZero color="primary">
             <ShoppingCartOutlinedIcon />
           </Badge>
         </Link>
