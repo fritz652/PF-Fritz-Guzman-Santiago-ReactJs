@@ -1,0 +1,7 @@
+.gridBox {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.imgPic {
+  max-height: 350px;
+}
