@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { products } from "../Mock/productsMock";
+//import { products } from "../Mock/productsMock";
 
 export const CartContext = createContext();
 
@@ -25,8 +25,10 @@ const CartContextComponent = ({ children }) => {
         }
       });
       setCart(newArr);
+      localStorage.setItem("cart", JSON.stringify(newArr));
     } else {
       setCart([...cart, product]);
+      localStorage.setItem("cart", JSON.stringify(...cart, product));
     }
   };
   const isInCart = (id) => {
