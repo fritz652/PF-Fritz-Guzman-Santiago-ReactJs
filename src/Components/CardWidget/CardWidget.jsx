@@ -12,13 +12,13 @@ const CardWidget = () => {
   let total = getTotalQuantity();
   return (
     <ul className="navTwo">
-      <li>
+      {/* <li>
         <Link href="#">
           <SearchIcon />
         </Link>
-      </li>
+      </li> */}
       <li>
-        <Link>
+        <Link to="/login">
           <PersonOutlineOutlinedIcon />
         </Link>
       </li>

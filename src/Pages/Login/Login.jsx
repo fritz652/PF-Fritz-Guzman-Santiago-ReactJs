@@ -1,28 +1,3 @@
-/* import { useState } from "react";
-//import { Login } from "@mui/icons-material";
-
-const Login = () => {
-  const [nombre, setNombre] = useState("Pepe");
-  9;
-  const changeNombre = () => {
-    if (nombre === "Pepe") {
-      setNombre("Papu");
-    } else {
-      setNombre("Pepe");
-    }
-  };
-
-  return (
-    <div>
-      <h2>{nombre}</h2>
-      <button onClick={changeNombre}>Cambiar nombre</button>
-    </div>
-  );
-};
-
-export default Login;
- */
-
 import {
   Box,
   Button,
@@ -42,10 +17,6 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
-
-  /* const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-  }; */
 
   return (
     <Box sx={{ padding: "20px" }}>
