@@ -14,7 +14,7 @@ function ItemDetail({ productSelected, onAdd, initial }) {
       }}
     >
       {/* aca todo el detalle */}
-      <div>
+      <div style={{ display: "grid", gap: "10px" }}>
         <h2>{productSelected.title}</h2>
         <Card style={{ display: "flex" }}>
           <div>
