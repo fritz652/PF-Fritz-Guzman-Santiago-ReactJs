@@ -10,6 +10,7 @@ function ItemDetail({ productSelected, onAdd, initial }) {
         gap: "10%",
         alignItems: "center",
         justifyContent: "center",
+        marginBottom: "100px",
       }}
     >
       {/* aca todo el detalle */}
@@ -23,7 +24,7 @@ function ItemDetail({ productSelected, onAdd, initial }) {
               style={{ maxWidth: "900px" }}
             />
           </div>
-          <div>
+          <div style={{ display: "flex", placeItems: "center" }}>
             <div style={{ marginTop: "20%" }}>
               <h4>{productSelected.description}</h4>
               {initial && <h5>Ya tienes {initial} en el carrito</h5>}
