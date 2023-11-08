@@ -36,15 +36,27 @@ const Cart = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
+        gap: "20px",
       }}
     >
       {(cart.length > 0 && <h1>Carrito de compras</h1>) ||
         (cart.length <= 0 && <h1>Carrito de compras vacío</h1>)}
       {cart.map((product) => (
-        <div key={product.id} style={{ border: "2px solid black" }}>
-          <h2>{product.title}</h2>
-          <h3>S/ {product.price}</h3>
-          <h3>cantidad: {product.quantity}</h3>
+        <div
+          key={product.id}
+          style={{
+            border: "2px solid black",
+            display: "flex",
+            height: "200px",
+            alignItems: "center",
+            gap: "50px",
+            borderRadius: "10px",
+          }}
+        >
+          <img src={product.img} alt="" style={{ maxWidth: "180px" }} />
+          <h4 style={{ maxWidth: "150px" }}>{product.title} </h4>
+          <h3 style={{ width: "100px" }}>S/ {product.price}</h3>
+          <h3> {product.quantity}</h3>
           <IconButton onClick={() => deleteProductById(product.id)}>
             <DeleteIcon color="primary" />
           </IconButton>
@@ -52,14 +64,16 @@ const Cart = () => {
       ))}
 
       {cart.length > 0 && (
-        <div>
+        <div style={{ display: "flex", gap: "30px" }}>
           <h2>EL total a pagar es: S/{total}</h2>
-          <Link to="/checkout">
-            <Button variant="contained">Finalizar compra</Button>
-          </Link>
-          <Button variant="contained" onClick={clearCartWithAlert}>
-            Vaciar Carrito
-          </Button>
+          <div style={{ display: "flex", gap: "30px" }}>
+            <Link to="/checkout">
+              <Button variant="contained">Finalizar compra</Button>
+            </Link>
+            <Button variant="contained" onClick={clearCartWithAlert}>
+              Vaciar Carrito
+            </Button>
+          </div>
         </div>
       )}
     </div>
