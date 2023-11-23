@@ -4,7 +4,9 @@ import { createContext, useState } from "react";
 export const CartContext = createContext();
 
 const CartContextComponent = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(
+    JSON.parse(localStorage.getItem("cart")) || []
+  );
 
   //const addToCart = () => {};
   //const clearCart = () => {};
@@ -28,7 +30,7 @@ const CartContextComponent = ({ children }) => {
       localStorage.setItem("cart", JSON.stringify(newArr));
     } else {
       setCart([...cart, product]);
-      localStorage.setItem("cart", JSON.stringify(...cart, product));
+      localStorage.setItem("cart", JSON.stringify([...cart, product]));
     }
   };
   const isInCart = (id) => {
@@ -45,6 +47,7 @@ const CartContextComponent = ({ children }) => {
 
   const clearCart = () => {
     setCart([]);
+    localStorage.removeItem("cart");
   };
 
   // ELimina un elemento del carrito
@@ -53,6 +56,7 @@ const CartContextComponent = ({ children }) => {
     console.log("el id es: ", id);
     let newArr = cart.filter((product) => product.id !== id);
     setCart(newArr);
+    localStorage.setItem("cart", JSON.stringify(newArr));
   };
 
   // totalizar carrito

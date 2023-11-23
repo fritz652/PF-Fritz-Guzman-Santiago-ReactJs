@@ -28,6 +28,7 @@ function ItemDetail({ productSelected, onAdd, initial }) {
             <div style={{ marginTop: "20%" }}>
               <h4>{productSelected.description}</h4>
               {initial && <h5>Ya tienes {initial} en el carrito</h5>}
+
               {/* Aca del contador */}
               <CounterContainer
                 stock={productSelected.stock}

@@ -1,70 +1,142 @@
 import { Button, TextField } from "@mui/material";
+import { useContext, useState } from "react";
+import { CartContext } from "../../context/CartContext";
+import { serverTimestamp } from "firebase/firestore";
+import { db } from "../../firebaseConfig";
+import { collection, addDoc, updateDoc, doc } from "firebase/firestore";
+import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const CheckoutFormik = () => {
-  const { handleChange, handleSubmit, errors } = useFormik({
-    initialValues: { nombre: "", apellido: "", email: "" },
-    onSubmit: (data) => {
-      console.log("se envio");
-      console.log(data);
-    },
+  const { cart, getTotalPrice, clearCart } = useContext(CartContext);
+  const total = getTotalPrice();
+  const [orderId, setOrderId] = useState(null);
 
-    validateOnChange: false,
+  const formik = useFormik({
+    initialValues: {
+      nombre: "",
+      apellido: "",
+      email: "",
+    },
+    onSubmit: (values) => {
+      let order = {
+        buyer: values,
+        items: cart,
+        total: total,
+        date: serverTimestamp(),
+      };
+
+      const ordersCollection = collection(db, "orders");
+
+      addDoc(ordersCollection, order).then((res) => setOrderId(res.id));
+
+      cart.forEach((e) => {
+        let refDoc = doc(db, "products", e.id);
+        updateDoc(refDoc, {
+          stock: e.stock - e.quantity,
+        });
+      });
+
+      clearCart();
+    },
     validationSchema: Yup.object({
       nombre: Yup.string()
         .required("El campo es obligatorio")
-        .min(3, "Debe tener almenos 3 caracteres")
-        .max(20, "No debe tener mas de 20 caracteres"),
+        .min(3, "Debe tener al menos 3 caracteres")
+        .max(20, "No debe tener más de 20 caracteres"),
       apellido: Yup.string()
         .required("El campo es obligatorio")
-        .min(3, "Debe tener almenos 3 caracteres")
-        .max(20, "No debe tener mas de 20 caracteres"),
+        .min(3, "Debe tener al menos 3 caracteres")
+        .max(20, "No debe tener más de 20 caracteres"),
       email: Yup.string()
         .required("El campo es obligatorio")
-        .email("Email no valido, asegurate de contener el simbolo @"),
+        .email("Email no válido, asegúrate de contener el símbolo @"),
     }),
   });
 
-  console.log(errors);
   return (
-    <div style={{ padding: "50px" }}>
-      <form onSubmit={handleSubmit}>
-        <TextField
-          id="outlined-basic"
-          label="Nombre"
-          variant="outlined"
-          name="nombre"
-          onChange={handleChange}
-          error={errors.nombre ? true : false}
-          helperText={errors.nombre}
-        />
-        <TextField
-          id="outlined-basic"
-          label="Apellido"
-          variant="outlined"
-          name="apellido"
-          onChange={handleChange}
-          error={errors.apellido ? true : false}
-          helperText={errors.apellido}
-        />
-        <TextField
-          id="outlined-basic"
-          label="Email"
-          variant="outlined"
-          name="email"
-          onChange={handleChange}
-          error={errors.email ? true : false}
-          helperText={errors.email}
-        />
-        <Button variant="contained" type="submit">
-          Enviar
-        </Button>
-        <Button variant={"outlined"} type="button">
-          Cancelar
-        </Button>
-      </form>
-    </div>
+    <>
+      {orderId ? (
+        <div
+          style={{
+            minHeight: "500px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "20px",
+          }}
+        >
+          <div
+            style={{
+              border: "2px solid black",
+              display: "flex",
+              height: "200px",
+              alignItems: "center",
+              gap: "20px",
+              borderRadius: "10px",
+              maxWidth: "900px",
+              padding: "20px",
+            }}
+          >
+            <h2>Gracias por su compra, su N° de comprobante es: {orderId}</h2>
+            <Link
+              style={{
+                fontSize: "20px",
+                textDecoration: "underline",
+                color: "blue",
+                width: "300px",
+              }}
+              to="/"
+            >
+              Seguir comprando
+            </Link>
+          </div>
+        </div>
+      ) : (
+        <div style={{ padding: "50px" }}>
+          <form onSubmit={formik.handleSubmit}>
+            <TextField
+              id="outlined-basic"
+              label="Nombre"
+              variant="outlined"
+              name="nombre"
+              onChange={formik.handleChange}
+              value={formik.values.nombre}
+              error={formik.touched.nombre && Boolean(formik.errors.nombre)}
+              helperText={formik.touched.nombre && formik.errors.nombre}
+            />
+            <TextField
+              id="outlined-basic"
+              label="Apellido"
+              variant="outlined"
+              name="apellido"
+              onChange={formik.handleChange}
+              value={formik.values.apellido}
+              error={formik.touched.apellido && Boolean(formik.errors.apellido)}
+              helperText={formik.touched.apellido && formik.errors.apellido}
+            />
+            <TextField
+              id="outlined-basic"
+              label="Email"
+              variant="outlined"
+              name="email"
+              onChange={formik.handleChange}
+              value={formik.values.email}
+              error={formik.touched.email && Boolean(formik.errors.email)}
+              helperText={formik.touched.email && formik.errors.email}
+            />
+            <Button variant="contained" type="submit">
+              Comprar
+            </Button>
+            <Button variant={"outlined"} type="button">
+              Cancelar
+            </Button>
+          </form>
+        </div>
+      )}
+    </>
   );
 };
 
