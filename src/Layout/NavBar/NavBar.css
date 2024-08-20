@@ -26,9 +26,11 @@ li {
   /* font-family: 'Times New Roman', Times, serif; */
 }
 
-li:hover {
-  border-bottom: 2px solid #101725;
+.h-color:hover {
+  border-bottom: 2px solid #009ee3;
+  color: #009ee3;
 }
+
 
 a {
   color: #121212;

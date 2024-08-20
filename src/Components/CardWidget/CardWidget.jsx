@@ -19,13 +19,13 @@ const CardWidget = () => {
       </li> */}
       <li>
         <Link to="/login">
-          <PersonOutlineOutlinedIcon />
+          <PersonOutlineOutlinedIcon className="h-color" />
         </Link>
       </li>
       <li>
         <Link to="/cart">
           <Badge badgeContent={total} showZero color="primary">
-            <ShoppingCartOutlinedIcon />
+            <ShoppingCartOutlinedIcon className="h-color"/>
           </Badge>
         </Link>
       </li>
