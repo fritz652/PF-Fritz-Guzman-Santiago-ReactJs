@@ -5,8 +5,7 @@ nav {
   color: #000000;
   display: flex;
   align-items: center;
-  position: fixed;
-  z-index: 9;
+  box-shadow: 0px 2.5px 5px 0px rgba(0,0,0,0.75);
 }
 
 .logo {
