@@ -1,7 +1,7 @@
 //React Dom
 import { BrowserRouter } from "react-router-dom";
 //layout
-import Header from "./Layout/Header/Header";
+import Header from "./Components/Header/Header.jsx";
 import AppRouter from "./router/AppRouter";
 
 import { ThemeProvider } from "@emotion/react";

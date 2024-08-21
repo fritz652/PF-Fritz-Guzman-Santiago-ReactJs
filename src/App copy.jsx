@@ -1,7 +1,7 @@
 //React Dom
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //layout
-import Header from "./Layout/Header/Header";
+import Header from "./Components/Header/Header.jsx";
 //Components
 
 //Pages

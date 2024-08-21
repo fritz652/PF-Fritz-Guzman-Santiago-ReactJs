@@ -10,23 +10,23 @@ const NavBar = () => {
     <>
       <nav>
         <ul className="logo">
-          <Link to="/"   className="h-color">Huellas</Link>
+          <Link to="/">StepUp</Link>
         </ul>
         <ul className="navOne">
           <Link to="/all">
-            <li   className="h-color">All</li>
+            <li>All</li>
           </Link>
           <Link to="/category/hombre">
-            <li   className="h-color">Hombre</li>
+            <li>Hombre</li>
           </Link>
           <Link to="/category/mujer">
-            <li   className="h-color">Mujer</li>
+            <li>Mujer</li>
           </Link>
           <Link to="/category/kids">
-            <li   className="h-color">Kids</li>
+            <li>Kids</li>
           </Link>
         </ul>
-        <CardWidget/>
+        <CardWidget />
       </nav>
     </>
   );
