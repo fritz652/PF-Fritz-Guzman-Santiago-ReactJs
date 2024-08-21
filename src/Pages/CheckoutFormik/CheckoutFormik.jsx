@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
+import './CheckoutFormik.css'
+
 const CheckoutFormik = () => {
   const { cart, getTotalPrice, clearCart } = useContext(CartContext);
   const total = getTotalPrice();
@@ -58,38 +60,10 @@ const CheckoutFormik = () => {
   return (
     <>
       {orderId ? (
-        <div
-          style={{
-            minHeight: "500px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "20px",
-          }}
-        >
-          <div
-            style={{
-              border: "2px solid black",
-              display: "flex",
-              height: "200px",
-              alignItems: "center",
-              gap: "20px",
-              borderRadius: "10px",
-              maxWidth: "900px",
-              padding: "20px",
-            }}
-          >
+        <div className="boxCheckoutFormik">
+          <div className="boxInside">
             <h2>Gracias por su compra, su N° de comprobante es: {orderId}</h2>
-            <Link
-              style={{
-                fontSize: "20px",
-                textDecoration: "underline",
-                color: "blue",
-                width: "300px",
-              }}
-              to="/"
-            >
+            <Link className="boxLink" to="/">
               Seguir comprando
             </Link>
           </div>
