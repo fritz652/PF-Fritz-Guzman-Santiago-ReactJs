@@ -35,24 +35,26 @@ const ItemListContainer = () => {
   }, [categoryName]);
 
   return (
-    <div
-      style={{
-        paddingTop: "80px",
-      }}
-    >
-      {items.length === 0 ? (
-        <BeatLoader
+    <>
+      <div
           style={{
-            display: "flex",
-            justifyContent: "center",
-            alignContent: "center",
-            paddingTop: "200px",
+            paddingTop: "80px",
           }}
-        />
-      ) : (
-        <ItemList items={items} cssOverride={{}} />
-      )}
-    </div>
+        >
+          {items.length === 0 ? (
+            <BeatLoader
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignContent: "center",
+                paddingTop: "200px",
+              }}
+            />
+          ) : (
+            <ItemList items={items} cssOverride={{}} />
+          )}
+      </div>
+    </>
   );
 };
 

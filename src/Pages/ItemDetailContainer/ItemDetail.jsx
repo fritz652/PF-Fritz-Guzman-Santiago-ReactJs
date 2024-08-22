@@ -8,13 +8,9 @@ function ItemDetail({ productSelected, onAdd, initial }) {
       {/* aca todo el detalle */}
       <div className="boxItemDetal">
         <h2 className="titleProduct">{productSelected.title}</h2>
-        <Card style={{ display: "flex" }}>
+        <Card className="flex">
           <div>
-            <img
-              src={productSelected.img}
-              alt=""
-              style={{ maxWidth: "900px" }}
-            />
+            <img src={productSelected.img} alt="" className="principalImg"/>
           </div>
           <div style={{ display: "flex", placeItems: "center" }}>
             <div style={{ marginTop: "20%" }}>
@@ -22,7 +18,7 @@ function ItemDetail({ productSelected, onAdd, initial }) {
               {initial && <h5>Ya tienes {initial} en el carrito</h5>}
 
               {/* Aca del contador */}
-              <CounterContainer
+              <CounterContainer 
                 stock={productSelected.stock}
                 onAdd={onAdd}
                 initial={initial}
