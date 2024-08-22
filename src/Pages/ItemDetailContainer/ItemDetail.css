@@ -6,3 +6,21 @@
 .imgPic {
   max-height: 350px;
 }
+
+.containerItemDetail{
+  display: flex;
+  gap: 10%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px ;
+}
+
+.boxItemDetal{
+  display: grid;
+  gap:10px;
+}
+
+.titleProduct{
+  margin-bottom: 50px;
+}

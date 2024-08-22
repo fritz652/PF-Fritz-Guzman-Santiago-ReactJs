@@ -4,18 +4,10 @@ import "./ItemDetail.css";
 
 function ItemDetail({ productSelected, onAdd, initial }) {
   return (
-    <div
-      style={{
-        display: "flex",
-        gap: "10%",
-        alignItems: "center",
-        justifyContent: "center",
-        marginBottom: "100px",
-      }}
-    >
+    <div className="containerItemDetail">
       {/* aca todo el detalle */}
-      <div style={{ display: "grid", gap: "10px" }}>
-        <h2>{productSelected.title}</h2>
+      <div className="boxItemDetal">
+        <h2 className="titleProduct">{productSelected.title}</h2>
         <Card style={{ display: "flex" }}>
           <div>
             <img
