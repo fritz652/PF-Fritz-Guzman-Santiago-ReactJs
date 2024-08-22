@@ -14,11 +14,11 @@ const useStyles = {
     width: "100%",
     position: "relative",
     textAlign: "center",
-    marginTop: 20,
+/*     marginTop: 20, */
   },
   image: {
     width: "100%",
-    maxHeight: 500,
+    height: 500,
     objectFit: "cover",
   },
   arrow: {

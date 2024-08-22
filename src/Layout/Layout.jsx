@@ -7,7 +7,7 @@ import './Layout.css';
 const Layout = () => {
   return (
     <div>
-      <div className="containerNav" style={{ height: "10vh" }}>
+      <div className="containerNav">
         <NavBar />
       </div>
       <div style={{ minHeight: "80vh" }}>
