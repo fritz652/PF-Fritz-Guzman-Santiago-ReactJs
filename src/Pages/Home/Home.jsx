@@ -10,6 +10,7 @@ import botas1 from '../../assets/botas1.png';
 import botas2 from '../../assets/botas2.png';
 
 import './Home.css'
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -19,13 +20,13 @@ const Home = () => {
         <div><h2 className="titleHome">Lo nuevo</h2></div>
         <Grid container className="gapCont">
           <Grid item xs={12} sm={5} className="bgCard">
-              <div className="d-flex">
+              <Link className="d-flex">
                   <img className="imgCard" src={calzado} alt="" />
                   <div className="centerCol w-200">
                       <h2 className="titleCard">Lo nuevo en Calzados StepUp</h2>
                       <p className="txt">Calzados urbano para varon </p>
                   </div>
-              </div>
+              </Link>
           </Grid>
           <Grid item xs={12} sm={6} className="bgCard">
               <div className="d-flex">
