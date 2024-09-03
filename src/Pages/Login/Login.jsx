@@ -19,22 +19,24 @@ const Login = () => {
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
   return (
-    <Box sx={{ padding: "20px" }}>
+    <Box sx={{ padding: "20px"}}>
       <Grid
         container
         spacing={2}
         sx={{
           display: "flex",
           justifyContent: "center",
+          alignItems:"center",
           flexDirection: "column",
+          marginTop:"10vh"
         }}
       >
         <Grid item xs={12} sm={8} md={6} lg={4} xl={3}>
-          <TextField label="email" fullWidth />
+          <TextField label="email" fullWidth sx={{minWidth:"20vw"}}/>
         </Grid>
         <Grid item xs={12} sm={8} md={6} lg={4} xl={3}>
-          <FormControl variant="outlined" fullWidth>
-            <InputLabel htmlFor="outlined-adornment-password">
+          <FormControl variant="outlined" fullWidth sx={{minWidth:"20vw"}}>
+            <InputLabel htmlFor="outlined-adornment-password" >
               Password
             </InputLabel>
             <OutlinedInput
@@ -56,7 +58,7 @@ const Login = () => {
           </FormControl>
         </Grid>
         <Grid item xs={12} sm={8} md={6} lg={4} xl={3}>
-          <Button variant="contained" fullWidth>
+          <Button variant="contained" fullWidth sx={{minWidth:"20vw", height:"50px"}}>
             Ingresar
           </Button>
         </Grid>
